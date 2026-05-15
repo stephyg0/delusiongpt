@@ -8,6 +8,7 @@
   },
   "files": [
     "dist",
+    "messages.txt",
     "README.md",
     ".env.example"
   ],

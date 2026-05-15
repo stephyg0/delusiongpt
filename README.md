@@ -1,6 +1,6 @@
 # DelusionGPT
 
-DelusionGPT is a calm, premium-feeling terminal companion for stressed developers. Run it and it immediately gives you a restrained, delusional support message. Press Enter for another, or type what happened if you want a context-aware message from its curated local response system.
+DelusionGPT is a calm, premium-feeling terminal companion for stressed developers. Run it and it immediately gives you a restrained, delusional support message. Press Enter for another, or type what happened if you want another message from its curated local response bank.
 
 It begins as a sincere developer wellness tool. It does not necessarily remain well.
 
@@ -13,12 +13,13 @@ npx delusiongpt
 - Interactive conversational CLI
 - Instant support messages on launch
 - Mood escalation over time
-- Context-aware support for npm errors, deploys, interviews, debugging, startup ideas, burnout, and lack of sleep
+- A general message bank for npm errors, deploys, CS coursework, debugging, startup ideas, burnout, and lack of sleep
 - Local JSON session memory for your name, projects, goals, and repeated frustrations
-- Founder, interview, and burnout modes
+- Founder, CS student, and burnout modes
 - Late-night tone shifts
 - Restrained terminal styling
 - No network calls, API keys, or AI provider setup
+- Editable response copy in `messages.txt`
 
 ## Setup
 
@@ -45,7 +46,23 @@ It is the first measurable sign that your architecture has exceeded local realit
 > enter · vent · q
 ```
 
-Press Enter for another message, type `vent` to open a boxed CLI notepad for a longer rant, or type `q` to leave. Finish a vent by typing `/done` on its own line. After a vent, DelusionGPT reads the emotional incident report and responds with context-aware local reassurance.
+Press Enter for another message, type `vent` to open a boxed CLI notepad for a longer rant, or type `q` to leave. Finish the pad by typing `/done` on its own line. DelusionGPT responds with another local reassurance.
+
+## Editing Messages
+
+All response copy lives in [`messages.txt`](messages.txt).
+
+Sections look like this:
+
+```text
+[default]
+The compiler is scared because you are moving fast emotionally.
+---
+Do not worry.
+You are the next Zuckerberg, but with better variable names.
+```
+
+Add new messages under an existing section and separate them with `---`.
 
 After building:
 
@@ -57,7 +74,7 @@ Modes:
 
 ```bash
 delusiongpt --founder
-delusiongpt --interview
+delusiongpt --cs-student
 delusiongpt --burnout
 ```
 

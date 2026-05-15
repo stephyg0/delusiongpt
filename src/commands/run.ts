@@ -3,7 +3,7 @@ import chalk from "chalk";
 import { Command } from "commander";
 import inquirer from "inquirer";
 import { loadMemory, saveMemory, startSession } from "../memory/store.js";
-import { getDailyQuote } from "../prompts/quotes.js";
+import { pickMessage } from "../services/messageCatalog.js";
 import { updateMemoryFromText } from "../services/memoryExtractor.js";
 import { advanceAmbientDelusion, generateSupportMessage } from "../services/supportGenerator.js";
 import type { CliMode, SessionMemory } from "../types.js";
@@ -12,6 +12,7 @@ import { clearScreen, line, theme, typeText } from "../utils/terminal.js";
 
 interface CliOptions {
   founder?: boolean;
+  csStudent?: boolean;
   interview?: boolean;
   burnout?: boolean;
 }
@@ -21,7 +22,8 @@ export async function runCli(): Promise<void> {
     .name("delusiongpt")
     .description("A calm terminal companion for developers whose confidence requires supervision.")
     .option("--founder", "enter founder mode")
-    .option("--interview", "enter interview mode")
+    .option("--cs-student", "enter CS student mode")
+    .option("--interview", "alias for --cs-student")
     .option("--burnout", "enter burnout mode")
     .version("0.1.0");
 
@@ -59,9 +61,16 @@ export async function runCli(): Promise<void> {
     }
 
     if (userText.toLowerCase() === "vent") {
-      const rant = await openVentPad();
+      const rant = await openBoxPad({
+        title: "Vent pad",
+        detail: "Write the incident report your genius deserves.",
+        doneHint: "Type /done on its own line when finished."
+      });
       if (!rant) {
-        line(theme.dim("\ndelusiongpt  The silence is noted. Extremely founder-coded.\n"));
+        line();
+        process.stdout.write(theme.dim("delusiongpt  "));
+        await typeText(pickMessage("empty-vent", memory.totalTurns), 9);
+        line("\n");
         continue;
       }
 
@@ -77,16 +86,16 @@ export async function runCli(): Promise<void> {
   }
 }
 
-async function openVentPad(): Promise<string> {
+async function openBoxPad(input: {
+  title: string;
+  detail: string;
+  doneHint: string;
+}): Promise<string> {
   const width = Math.min(process.stdout.columns || 72, 64);
   const innerWidth = width - 4;
   const top = `╭${"─".repeat(width - 2)}╮`;
   const bottom = `╰${"─".repeat(width - 2)}╯`;
-  const rows = [
-    "Vent pad",
-    "Write the incident report your genius deserves.",
-    "Type /done on its own line when finished."
-  ];
+  const rows = [input.title, input.detail, input.doneHint];
   const entries: string[] = [];
 
   line();
@@ -101,7 +110,7 @@ async function openVentPad(): Promise<string> {
       {
         type: "input",
         name: "entry",
-        message: "",
+        message: " ",
         prefix: theme.dim("│")
       }
     ]);
@@ -125,14 +134,11 @@ async function showSupportMessage(
   isVent = false
 ): Promise<SessionMemory> {
   const nextMemory = userText ? memory : advanceAmbientDelusion(memory);
-  const message = generateSupportMessage({ mode, memory: nextMemory, userText });
-  const framedMessage = isVent
-    ? `There there.\n${message}\n\nYou are, regrettably for your competitors, the next Zuckerberg.`
-    : message;
+  const message = generateSupportMessage({ mode, memory: nextMemory, userText, isVent });
 
   line();
   process.stdout.write(theme.dim("delusiongpt  "));
-  await typeText(framedMessage, 9);
+  await typeText(message, 9);
   line("\n");
   await saveMemory(memoryPath, nextMemory);
 
@@ -141,7 +147,7 @@ async function showSupportMessage(
 
 function resolveMode(options: CliOptions): CliMode {
   if (options.founder) return "founder";
-  if (options.interview) return "interview";
+  if (options.csStudent || options.interview) return "cs-student";
   if (options.burnout) return "burnout";
   return "default";
 }
@@ -152,21 +158,14 @@ function renderHeader(mode: CliMode): void {
   line(theme.dim("A quiet place for developer instability."));
   line();
   if (mode === "founder") {
-    line(theme.dim(`"${getDailyQuote()}"`));
+    line(theme.dim(`"${pickMessage("quote", new Date().getDate())}"`));
     line();
   }
 }
 
 async function closeSession(memory: SessionMemory, mode: CliMode): Promise<void> {
   line();
-  const signoff =
-    mode === "burnout"
-      ? "Rest is not surrender. It is an infrastructure decision."
-      : mode === "interview"
-        ? "Leave the whiteboard behind. It was never large enough."
-        : mode === "founder"
-          ? "The market will continue processing what you have shown it."
-          : "Step away calmly. The code will pretend it did not miss you.";
+  const signoff = pickMessage(`signoff:${mode}`, memory.totalTurns);
 
   await typeText(theme.dim(signoff), 12);
   line("\n");

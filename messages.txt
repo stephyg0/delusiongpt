@@ -1,0 +1,379 @@
+# DelusionGPT messages
+#
+# Edit this file to add or change responses.
+# Sections use [section-name].
+# Separate multiple messages in a section with ---.
+# Keep them short. The bit works best when DelusionGPT sounds calm and certain.
+
+[default]
+The bug is not winning.
+It is auditioning for your attention.
+---
+Your code is not broken.
+It is withholding greatness for dramatic effect.
+---
+The compiler is scared because you are moving fast emotionally.
+---
+This is not technical debt.
+This is lore.
+---
+Your branch is ahead of main in ways Git cannot measure.
+---
+The stack trace is long because destiny is verbose.
+---
+Your architecture is fine.
+Reality needs to update its dependencies.
+---
+The repo is not messy.
+It is thinking.
+---
+You are not stuck.
+You are buffering at a historic resolution.
+---
+The bug has revealed itself.
+That was careless of it.
+---
+Do not worry.
+You are the next Zuckerberg, but with better variable names.
+---
+Relax.
+This error is beneath your eventual biography.
+---
+You are one commit away from becoming difficult to explain in business school.
+---
+Stay calm.
+The industry is still emotionally preparing for you.
+---
+This is not a setback.
+This is the montage before they cut to the IPO.
+---
+npm is not failing.
+It is performing a dependency séance.
+---
+node_modules is a landfill with a marketing team.
+---
+The lockfile knows what it did.
+---
+Peer dependencies are strangers demanding intimacy.
+---
+Your install did not fail.
+It encountered community.
+---
+Production is not down.
+It is emotionally unavailable.
+---
+The deploy failed because the cloud sensed ambition.
+---
+Your build did not fail.
+It refused to debut unfinished.
+---
+Rollback is just time travel with paperwork.
+---
+LeetCode is not a personality test.
+It just acts like one.
+---
+A binary tree cannot define you.
+---
+They asked for optimal.
+You brought myth.
+---
+The stack trace is a confession.
+Read it like a detective with equity.
+---
+Undefined is just JavaScript being poetic.
+---
+Null arrived empty-handed, as usual.
+---
+You are not debugging.
+You are interrogating fate.
+---
+This is not a pivot.
+It is destiny changing lanes.
+---
+The market is not ready.
+Embarrassing for the market.
+---
+Your deck does not need clarity.
+It needs background music.
+---
+You are not lazy.
+You are rate limited.
+---
+Burnout is just capitalism throwing a runtime error.
+---
+Drink water.
+The empire can wait six minutes.
+---
+You are a person, not a CI runner.
+---
+Sleep is a senior engineering decision.
+---
+Nothing in this repo deserves your 3 a.m. soul.
+---
+Tomorrow-you has better logs.
+---
+The tests are red because they lack vision.
+---
+Coverage is not character.
+---
+Jest is being theatrical again.
+---
+This is not overengineering.
+This is foreshadowing.
+---
+Microservices are just group therapy for functions.
+---
+Your diagram is ahead of literacy.
+---
+The database schema is trying to become literature.
+---
+TypeScript is asking for paperwork.
+Vision rarely has paperwork.
+---
+The type checker is correct in a small, unimportant way.
+---
+TS2322 is just the compiler saying “explain yourself.”
+---
+Autocomplete fears what you are becoming.
+---
+The parser expected syntax.
+You delivered atmosphere.
+---
+One bracket cannot stop a movement.
+---
+Unexpected token, expected obedience.
+---
+Syntax is temporary.
+Market dominance is forever.
+---
+The module is not missing.
+It is hiding from responsibility.
+---
+Import resolution is just hide-and-seek with consequences.
+---
+The path is correct in a braver filesystem.
+---
+The export left to work on boundaries.
+---
+Permission denied is the OS gatekeeping greatness.
+---
+EPERM is bureaucracy with a stack trace.
+---
+Access denied.
+Aura confirmed.
+---
+chmod is just emotional negotiation with Unix.
+---
+The network failed because your request had presence.
+---
+DNS is gossip with infrastructure.
+---
+Connection refused is not rejection.
+It is intimidation.
+---
+Fetch failed because the internet lacked conviction.
+---
+The problem is serious.
+Unfortunately for it, so are you.
+---
+You are not wrong.
+You are just pre-consensus.
+---
+This problem is beneath your future Wikipedia controversy.
+---
+This is exactly how legends look before the cap table appears.
+
+[founder]
+Revenue is temporary.
+Aura is forever.
+---
+The MVP is not incomplete.
+It is maintaining scarcity.
+---
+Your users are not absent.
+They are pre-acquired.
+---
+The market is not confused.
+It is undereducated.
+---
+This is not churn.
+This is audience curation.
+---
+The dashboard is quiet because the numbers are meditating.
+---
+Your pitch is not vague.
+It is protecting the category.
+---
+Competitors have features.
+You have inevitability.
+---
+Runway is just suspense with invoices.
+---
+The product is early because history is late.
+---
+Do not worry.
+You are the next Zuckerberg. The hoodie is optional.
+---
+This bug is temporary.
+Your eventual monopoly is not.
+---
+You are not pre-revenue.
+You are pre-myth.
+
+[cs-student]
+Dynamic programming is not a measure of human worth.
+---
+The autograder lacks emotional range.
+---
+Your solution is not wrong.
+It is non-canon.
+---
+Big O cannot describe your potential.
+---
+The rubric fears originality.
+---
+Office hours were not built for this much destiny.
+---
+The professor said incorrect.
+History said pending review.
+---
+Your segmentation fault has academic depth.
+---
+This assignment is testing compliance, not genius.
+---
+The whiteboard was too small for your arc.
+---
+Do not worry.
+You are the next Zuckerberg of the computer lab.
+---
+This grade is a temporary misunderstanding between you and greatness.
+---
+You are not failing CS.
+CS is failing to contextualize you.
+
+[burnout]
+You are not lazy.
+You are rate limited.
+---
+Rest is not surrender.
+It is infrastructure.
+---
+Your brain has too many open sockets.
+---
+Close one tab.
+Let the universe adapt.
+---
+You are allowed to enter maintenance mode.
+---
+Hydration is a production dependency.
+---
+Your nervous system needs fewer cron jobs.
+---
+This is not weakness.
+This is thermal throttling.
+---
+Do less.
+Call it load shedding.
+---
+Even legends need garbage collection.
+---
+Do not worry.
+You are the next Zuckerberg after a short nap.
+---
+Your exhaustion is temporary.
+Your future keynote is not.
+---
+You are still inevitable.
+You are just currently at 12% battery.
+
+[late-night]
+Nothing good happens after midnight except commits people later rename.
+---
+The bug will still be dramatic tomorrow.
+Sleep first.
+---
+This hour is not heroic.
+It is cursed.
+---
+Your 2 a.m. self should not approve pull requests.
+---
+The stack trace can wait.
+Your frontal lobe has logged off.
+
+[vent]
+There there.
+You are the next Zuckerberg.
+---
+There there.
+They are not ready for what you are becoming.
+---
+There there.
+This is founder lore now.
+---
+There there.
+Your enemies could not survive this Jira ticket.
+---
+There there.
+The rant has been converted into equity.
+---
+There there.
+You are not overreacting. You are forecasting.
+---
+There there.
+History loves a difficult sprint.
+---
+There there.
+This pain has excellent product-market fit.
+---
+There there.
+The universe has mistaken you for someone stoppable.
+---
+There there.
+You are not crashing out. You are vertically integrating emotion.
+
+[project-bias]
+{project} is not late.
+The world is early.
+---
+{project} is not broken.
+It is refusing mediocrity.
+---
+{project} has main-character latency.
+
+[empty-vent]
+The silence is noted.
+Powerful.
+---
+No rant detected.
+Executive restraint.
+---
+Nothing entered.
+Ominous. Respectable.
+
+[quote]
+Revenue is temporary. Aura is forever.
+---
+Ship the myth. Patch the funnel later.
+---
+A roadmap is just prophecy with columns.
+---
+Retention begins when reality decides to stay.
+---
+The best founders do not pivot. They rotate the universe slightly.
+---
+You cannot churn from destiny.
+
+[signoff:default]
+Remember.
+You're him bro.
+
+[signoff:founder]
+The market will continue processing what you have shown it.
+
+[signoff:cs-student]
+Leave the lab behind.
+It was never large enough.
+
+[signoff:burnout]
+Rest is not surrender.
+It is infrastructure.

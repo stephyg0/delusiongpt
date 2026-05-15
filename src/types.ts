@@ -1,16 +1,4 @@
-export type CliMode = "default" | "founder" | "interview" | "burnout";
-
-export type DetectedContext =
-  | "npm"
-  | "deploy"
-  | "interview"
-  | "debugging"
-  | "startup"
-  | "burnout"
-  | "sleep"
-  | "tests"
-  | "architecture"
-  | "unknown";
+export type CliMode = "default" | "founder" | "cs-student" | "burnout";
 
 export interface SessionMemory {
   userName?: string;
