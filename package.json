@@ -4,13 +4,12 @@
   "description": "A calm, emotionally supportive, increasingly delusional terminal companion for stressed developers.",
   "type": "module",
   "bin": {
-    "delusiongpt": "./dist/index.js"
+    "delusiongpt": "dist/index.js"
   },
   "files": [
     "dist",
     "messages.txt",
-    "README.md",
-    ".env.example"
+    "README.md"
   ],
   "scripts": {
     "build": "tsc",
